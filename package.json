@@ -2,9 +2,10 @@
   "name": "show-notes",
   "displayName": "Show Notes",
   "description": "快捷显示代码注释（支持 Java、JavaScript、TypeScript）",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "publisher": "local",
   "license": "MIT",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/yourusername/show-notes"
@@ -23,6 +24,12 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "show-notes.refresh",
+        "title": "Show Notes: 刷新当前文件的注释"
+      }
+    ],
     "configuration": {
       "title": "Show Notes",
       "properties": {
