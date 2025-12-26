@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+
+# Compiled output
+out/
+dist/
+*.vsix
+
+# Test directory
+.vscode-test/
+.vscode-test-web/
+
+# Coverage
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Build files
+*.js.map

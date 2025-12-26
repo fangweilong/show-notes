@@ -1,0 +1,77 @@
+{
+  "name": "show-notes",
+  "displayName": "Show Notes",
+  "description": "快捷显示代码注释（支持 Java、JavaScript、TypeScript）",
+  "version": "0.0.3",
+  "publisher": "local",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/show-notes"
+  },
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:java",
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Show Notes",
+      "properties": {
+        "showNotes.commentPrefix": {
+          "type": "string",
+          "default": "//",
+          "description": "行尾注释的前缀符号"
+        },
+        "showNotes.maxLength": {
+          "type": "number",
+          "default": 80,
+          "minimum": 20,
+          "maximum": 200,
+          "description": "注释显示的最大字符数"
+        },
+        "showNotes.commentColor": {
+          "type": "string",
+          "default": "#6A9955",
+          "description": "注释文字的颜色（支持十六进制颜色代码）"
+        },
+        "showNotes.fontStyle": {
+          "type": "string",
+          "default": "italic",
+          "enum": [
+            "normal",
+            "italic",
+            "oblique"
+          ],
+          "description": "注释文字的字体样式"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.107.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.48.1",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
