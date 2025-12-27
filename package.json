@@ -3,7 +3,7 @@
   "displayName": "Show Notes",
   "description": "快捷显示代码注释（支持 Java、JavaScript、TypeScript）",
   "version": "0.1.0",
-  "publisher": "local",
+  "publisher": "Teler",
   "license": "MIT",
   "icon": "icon.png",
   "repository": {
